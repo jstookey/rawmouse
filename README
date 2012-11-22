@@ -12,7 +12,7 @@ This program was compiled using MinGW/GCC
 
 In order to recreate the compile environment:
 
-  1) Install the "Win32 compile utilities" (MinGW/GCC) for Mame from http://www.mame.net/downmain.html
+  1) Install and configure mingw from www.mingw.org (tested with mingw-get-inst-20120426.exe).
   2) The files that are required are raw_mouse.c, raw_mouse.h, and raw_mouse_test.c
   3) From the command line, run "gcc raw_mouse.c raw_mouse_test.c"
 

@@ -94,7 +94,7 @@ static int excluded_sysmouse_devices_count;
 //    Here's the quote from http://www.jsiinc.com/SUBJ/tip4600/rh4628.htm:
 //      "Note that you should not make any programmatic assumption about how an instance ID is formatted. 
 //       To determine root devices, you can check device status bits."
-//    So tell me, what are these (how you say) "status bits" and where can I get some?
+//    Unfortunately, I never found the status bits.
 static BOOL is_rm_rdp_mouse(char cDeviceString[]);
 
 static BOOL read_raw_input(PRAWINPUT);
