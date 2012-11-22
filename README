@@ -1,0 +1,39 @@
+------------------ CHANGELOG ---------------------
+2004-04-22 - added the ability to detect whether RawMouse is available or not so the application can 
+   either use a different multi-mouse system, or exit gracefully (thanks to Mark Healey).
+2005-04-24 - Modified the code work with the latest version of MinGW.  The new MinGW incorporates
+   rawinput, so my winuser header and library is obsolete.
+2006-03-05 - Initialized is_absolute and is_virtual_desktop to work better with newer versions of VStudio.
+2012-11-22 - Moved source files to Github
+
+------------------  COMPILING WITH GCC ------------------------------
+
+This program was compiled using MinGW/GCC
+
+In order to recreate the compile environment:
+
+  1) Install the "Win32 compile utilities" (MinGW/GCC) for Mame from http://www.mame.net/downmain.html
+  2) The files that are required are raw_mouse.c, raw_mouse.h, and raw_mouse_test.c
+  3) From the command line, run "gcc raw_mouse.c raw_mouse_test.c"
+
+-------------------  COMPILING WITH MS VISUAL C++ --------------------
+
+This example can also be compiled with Microsoft Visual C++ version 6, but first you need to download
+        and install the Microsoft Platform SDK.  In order to access the Microsoft Platform SDK from VStudio, 
+	I had to go to tools->options->directories and add the SDK's bin, include, lib, and src folders.
+	In the same window, I had drag each of the SDK's folders to the top of the respective list
+	to give those folders priority over the others.
+
+	To create your project for Visual Studio (after you prepare VStudio to work with the MS
+	     Platform SDK), do the following:
+
+	1) Open Visual C++ and start a new Win32 Application as a "blank project"
+	   (This is necessary because if you simply open the .c file in VStudio
+	   VStudio will assume it's a "console application" and it won't compile properly.)
+	2) The files that are required are raw_mouse.c, raw_mouse.h, and raw_mouse_test.c
+	3) Copy all .c and .h files into the new project's root folder
+	4) In the left pane, click "File View" and left click "Source Files" and select
+	     "add files to folder" from the popup menu, and add your file.
+	5) You're all set!  Press f5 to build the program.
+
+**********************************************************************************************/
